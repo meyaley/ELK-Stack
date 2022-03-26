@@ -11,7 +11,7 @@ The files in this repository were used to configure the network depicted below.
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the playbook file may be used to install only certain pieces of it, such as Filebeat.
 
-  - _TODO: Enter the playbook file._
+  - filebeat_playbook.yml
   ```
   ---
 - name: installing and launching filebeat
@@ -59,7 +59,7 @@ This document contains the following details:
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
-Load balancing ensures that the application will be highly _available____, in addition to restricting __access___ to the network.
+Load balancing ensures that the application will be highly available, in addition to restricting access to the network.
 - _TODO: What aspect of security do load balancers protect? What is the advantage of a jump box?_
 Load balancers destribute traffic evenly throughout the network to prevent overloading a particular resourse. This helps improve availabilty and performance of websites and applications and also prevents against DDoS attacks.
 A jump box is a gateway into a remote network. It is used to access and manage devices first in a secure zone before connecting to other servers and devices
