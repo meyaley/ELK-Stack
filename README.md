@@ -1,17 +1,13 @@
-<<<<<<< HEAD
+
 =======
 # crispy-lamp
 GitHub Repository for Cybersecurity Unit 13
->>>>>>> 79ed836333ae949e88ed64f7a13af57d35a7eab4
 ## Automated ELK Stack Deployment
 
 The files in this repository were used to configure the network depicted below.
 
-<<<<<<< HEAD
-![TODO: Update the path with the name of your diagram](Images/diagram_filename.png)
+![TODO: Update the path with the name of your diagram](Images/unit12homework.drawio.png)
 =======
-![TODO: Update the path with the name of your diagram](~/crispy-lamp/Diagrams/unit12homework.drawio.png)
->>>>>>> 79ed836333ae949e88ed64f7a13af57d35a7eab4
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _____ file may be used to install only certain pieces of it, such as Filebeat.
 
