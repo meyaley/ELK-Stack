@@ -1,8 +1,17 @@
+<<<<<<< HEAD
+=======
+# crispy-lamp
+GitHub Repository for Cybersecurity Unit 13
+>>>>>>> 79ed836333ae949e88ed64f7a13af57d35a7eab4
 ## Automated ELK Stack Deployment
 
 The files in this repository were used to configure the network depicted below.
 
+<<<<<<< HEAD
 ![TODO: Update the path with the name of your diagram](Images/diagram_filename.png)
+=======
+![TODO: Update the path with the name of your diagram](~/crispy-lamp/Diagrams/unit12homework.drawio.png)
+>>>>>>> 79ed836333ae949e88ed64f7a13af57d35a7eab4
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _____ file may be used to install only certain pieces of it, such as Filebeat.
 
@@ -101,4 +110,8 @@ _TODO: Answer the following questions to fill in the blanks:_
 - _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
 - _Which URL do you navigate to in order to check that the ELK server is running?
 
+<<<<<<< HEAD
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
+=======
+_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
+>>>>>>> 79ed836333ae949e88ed64f7a13af57d35a7eab4
