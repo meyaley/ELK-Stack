@@ -239,7 +239,7 @@ SSH into the control node and follow the steps below:
    - For example, to include machine WEB--1 you would add: 10.0.0.7 ansible_python_interpreter=/usr/bin/python3 
 - _Which URL do you navigate to in order to check that the ELK server is running?
 - ELK-IP-ADDRESS:5601
-    - (example: http://20.231.15.60:5601/app/kibana)
+    - (example: http://20.231.15.60:5601)
 
 
 
