@@ -229,6 +229,7 @@ SSH into the control node and follow the steps below:
 - Scroll to line #1806 and replace the IP address with the IP address of your ELK machine.
 - Save this file in  /etc/ansible/files/filebeat-config.yml.
 - Run the playbook, and navigate to ELK-IP-ADDRESS:5601/app/kibana to check that the installation worked as expected.
+    - (example: http://20.231.15.60:5601/app/kibana)
 
 
 - _Which file is the playbook? Where do you copy it?_
@@ -238,6 +239,7 @@ SSH into the control node and follow the steps below:
    - For example, to include machine WEB--1 you would add: 10.0.0.7 ansible_python_interpreter=/usr/bin/python3 
 - _Which URL do you navigate to in order to check that the ELK server is running?
 - ELK-IP-ADDRESS:5601
+    - (example: http://20.231.15.60:5601/app/kibana)
 
 
 
@@ -267,7 +269,7 @@ Create the Filebeat Installation Play
 
 Verify Installation and Playbook
 Navigate to Kibana
-- ELK-IP-ADDRESS:5601/app/kibana
+- ELK-IP-ADDRESS:5601/app/kibana  (example: http://20.231.15.60:5601/app/kibana)
 - Click System Logs
 - Click Check Data.
 - Scroll to the bottom and click on Verify Incoming Data.
