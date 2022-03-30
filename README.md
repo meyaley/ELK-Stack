@@ -247,20 +247,20 @@ SSH into the control node and follow the steps below:
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
 Create the Filebeat Configuration File
 Open a terminal and SSH into your jump box:
-- Run: ``` ssh azdmin@23.99.70.108 ```
+- Run: ```ssh azdmin@23.99.70.108```
 Start the Ansible container.
-- Run: ``` sudo docker container list -a ```
-- Run: ``` sudo docker start adoring_noether ```
+- Run: ```sudo docker container list -a```
+- Run: ```sudo docker start adoring_noether```
 SSH into the Ansible container.
-- Run: ``` sudo docker attach adoring_noether ```
-- Run: ``` cd /etc/ansible ```
+- Run: ```sudo docker attach adoring_noether```
+- Run: ```cd /etc/ansible```
 Copy the configuration file for Filebeat to your Ansible container: 
-- Run: ```curl https://gist.githubusercontent.com/slape/5cc350109583af6cbe577bbcc0710c93/raw/eca603b72586fbe148c11f9c87bf96a63cb25760/Filebeat > /etc/ansible/files/filebeat-config.yml ```
+- Run: ```curl https://gist.githubusercontent.com/slape/5cc350109583af6cbe577bbcc0710c93/raw/eca603b72586fbe148c11f9c87bf96a63cb25760/Filebeat > /etc/ansible/files/filebeat-config.yml```
 Edit the file to include your ELK server's IP address.
 Scroll to line #1106 and replace the IP address with the IP address of your ELK machine.
-- ``` hosts: ["10.1.0.4:9200"] ```
+- ```hosts: ["10.1.0.4:9200"]```
 Scroll to line #1806 and replace the IP address with the IP address of your ELK machine.
-- ``` host: "10.1.0.4:5601" ```
+- ```host: "10.1.0.4:5601"```
 Save this file in  /etc/ansible/files/filebeat-config.yml.
 
 Create the Filebeat Installation Play
