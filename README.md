@@ -230,13 +230,44 @@ SSH into the control node and follow the steps below:
 - Save this file in  /etc/ansible/files/filebeat-config.yml.
 - Run the playbook, and navigate to ELK-IP-ADDRESS:5601/app/kibana to check that the installation worked as expected.
 
-_TODO: Answer the following questions to fill in the blanks:_
-- _Which file is the playbook? Where do you copy it?_
-- _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
-- _Which URL do you navigate to in order to check that the ELK server is running?
 
-<<<<<<< HEAD
+- _Which file is the playbook? Where do you copy it?_
+- The filebeat_playbook.yml, metricbeat_playbook.yml, and install-elk.yml are all playbooks. They are copied to the /etc/ansible directory. 
+- _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
+- Update the Ansible hosts file /etc/ansible/hosts with the appropriate IP address for each machine. 
+   - For example, to include machine WEB--1 you would add: 10.0.0.7 ansible_python_interpreter=/usr/bin/python3 
+- _Which URL do you navigate to in order to check that the ELK server is running?
+- ELK-IP-ADDRESS:5601
+
+
+
+
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
-=======
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
->>>>>>> 79ed836333ae949e88ed64f7a13af57d35a7eab4
+Create the Filebeat Configuration File
+Open a terminal and SSH into your jump box:
+- ssh azdmin@23.99.70.108
+Start the Ansible container.
+- sudo docker container list -a
+- sudo docker start adoring_noether
+SSH into the Ansible container.
+- sudo docker attach adoring_noether
+- cd /etc/ansible
+Copy the configuration file for Filebeat to your Ansible container: 
+- Run: curl https://gist.githubusercontent.com/slape/5cc350109583af6cbe577bbcc0710c93/raw/eca603b72586fbe148c11f9c87bf96a63cb25760/Filebeat > /etc/ansible/files/filebeat-config.yml
+Edit the file to include your ELK server's IP address.
+Scroll to line #1106 and replace the IP address with the IP address of your ELK machine.
+- hosts: ["10.1.0.4:9200"]
+Scroll to line #1806 and replace the IP address with the IP address of your ELK machine.
+- host: "10.1.0.4:5601"
+Save this file in  /etc/ansible/files/filebeat-config.yml.
+
+Create the Filebeat Installation Play
+- Create filebeat_playbook.yml (as shown above)
+- After updating the Filebeat configuration file and playbook, run: ansible-playbook filebeat-playbook.yml.
+
+Verify Installation and Playbook
+Navigate to Kibana
+- ELK-IP-ADDRESS:5601/app/kibana
+- Click System Logs
+- Click Check Data.
+- Scroll to the bottom and click on Verify Incoming Data.
