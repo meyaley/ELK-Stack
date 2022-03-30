@@ -158,7 +158,6 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
 - Metricbeat records metrics and statistics and forwards them to Elasticsearch or Logstash.
 
 The configuration details of each machine may be found below.
-_Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
 
 | Name     | Function | IP Address | Operating System |
 |----------|----------|------------|------------------|
@@ -194,13 +193,14 @@ A summary of the access policies in place can be found in the table below.
 ### Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
-- _TODO: What is the main advantage of automating configuration with Ansible?_
-Ansible is able to perform consistently and automatically across multiple machines.
+- Ansible is able to perform consistently and automatically across multiple machines.
 
 The playbook implements the following tasks:
-- _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
-- ...
-- ...
+- Install Docker
+- Install Python
+- Install Docker python module
+- Use more memory
+- Download and launch a docker elk container
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
@@ -208,10 +208,12 @@ The following screenshot displays the result of running `docker ps` after succes
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
-- _TODO: List the IP addresses of the machines you are monitoring_
+- WEB--1  10.0.0.7
+- WEB--2  10.0.0.5
 
 We have installed the following Beats on these machines:
-- _TODO: Specify which Beats you successfully installed_
+- Metricbeat
+- Filebeat
 
 These Beats allow us to collect the following information from each machine:
 - _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
