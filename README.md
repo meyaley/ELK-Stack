@@ -216,15 +216,19 @@ We have installed the following Beats on these machines:
 - Filebeat
 
 These Beats allow us to collect the following information from each machine:
-- _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
+- Metricbeat is a lightweight shipper that can be installed on your servers to collect metrics from the operating system and from services running on the server. Apache is one example of these services and is widely used to accept HTTP requests from internet users and sends them information in the form of files and Web pages.
+- Filebeat is a lightweight shipper for forwarding and centralizing log data. Filebeat monitors the speicified log files or locations, collects log events, and forwards them to Elasticsearch or Logstash for indexing. Filebeat can monitor failed SSH attempts. 
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the _____ file to _____.
-- Update the _____ file to include...
-- Run the playbook, and navigate to ____ to check that the installation worked as expected.
+- Copy the provided configuraton file for Filebeat to your Ansible container.
+- Update the configuration file to include your ELK server's IP address.
+- Scroll to line #1106 and replace the IP address with the IP address of your ELK machine.
+- Scroll to line #1806 and replace the IP address with the IP address of your ELK machine.
+- Save this file in  /etc/ansible/files/filebeat-config.yml.
+- Run the playbook, and navigate to ELK-IP-ADDRESS:5601/app/kibana to check that the installation worked as expected.
 
 _TODO: Answer the following questions to fill in the blanks:_
 - _Which file is the playbook? Where do you copy it?_
