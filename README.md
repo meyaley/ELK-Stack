@@ -45,7 +45,7 @@ These files have been tested and used to generate a live ELK deployment on Azure
       enabled: yes
   
   ```
-  -metricbeat_playbook.yml
+  - metricbeat_playbook.yml
  ```
  ---
 - name: installing and launching metricbeat
@@ -78,7 +78,7 @@ These files have been tested and used to generate a live ELK deployment on Azure
       name: metricbeat
       enabled: yes
  ```
-  -install_elk.yml
+  - install_elk.yml
   
   ```
   ---
@@ -150,15 +150,12 @@ This document contains the following details:
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
 Load balancing ensures that the application will be highly available, in addition to restricting access to the network.
-- _TODO: What aspect of security do load balancers protect? What is the advantage of a jump box?_
 Load balancers destribute traffic evenly throughout the network to prevent overloading a particular resourse. This helps improve availabilty and performance of websites and applications and also prevents against DDoS attacks.
 A jump box is a gateway into a remote network. It is used to access and manage devices first in a secure zone before connecting to other servers and devices
 
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the __log files___ and system __resources___.
-- _TODO: What does Filebeat watch for?_
-Filebeat watches for log files and collects log events. Then forwards them to Elasticsearch for Logstash for indexing.
-- _TODO: What does Metricbeat record?_
-Metricbeat records metrics and statistics and forwards them to Elasticsearch or Logstash.
+Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the log files and system resources.
+- Filebeat watches for log files and collects log events. Then forwards them to Elasticsearch for Logstash for indexing.
+- Metricbeat records metrics and statistics and forwards them to Elasticsearch or Logstash.
 
 The configuration details of each machine may be found below.
 _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
@@ -175,11 +172,14 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 
 The machines on the internal network are not exposed to the public Internet. 
 
-Only the _____ machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- _TODO: Add whitelisted IP addresses_
+Only the Jump Box machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
+- 71.205.228.90
 
-Machines within the network can only be accessed by _____.
-- _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
+Machines within the network can only be accessed by the Jump Box machine using SSH.
+- Jump Box Public IP address
+23.99.70.108
+- Jump Box Private IP address
+10.0.0.4
 
 A summary of the access policies in place can be found in the table below.
 
