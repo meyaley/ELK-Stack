@@ -233,7 +233,7 @@ SSH into the control node and follow the steps below:
 
 
 - _Which file is the playbook? Where do you copy it?_
-- The filebeat_playbook.yml, metricbeat_playbook.yml, and install-elk.yml are all playbooks. They are copied to the /etc/ansible directory. 
+- The filebeat_playbook.yml, metricbeat_playbook.yml, and install-elk.yml are all playbooks. They are copied to the /etc/ansible/files directory. 
 - _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
 - Update the Ansible hosts file /etc/ansible/hosts with the appropriate IP address for each machine. 
    - For example, to include machine WEB--1 you would add: 10.0.0.7 ansible_python_interpreter=/usr/bin/python3 
